@@ -13,10 +13,15 @@ const quadrado = (r) =>{
     if (r <= 0) {
         throw new Error ("Raiz Inválida")
     }
+    if (r == null || r == undefined) {
+        throw new Error("Raiz Vazia");
+    }
+    if (typeof(r) == "string") {
+        throw new Error("è palavra man numa função de raiz cai fora");
+    }
     raiz = Math.sqrt(r)
     return raiz
 }
-
 
 module.exports = {
     soma,
